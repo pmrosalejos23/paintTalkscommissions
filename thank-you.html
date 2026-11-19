@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Thank You | paintTalks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="/Logo.jpg">
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('paintTalks-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <main class="section" id="main">
+    <div class="container">
+      <div class="card">
+        <h1 class="h-title">Thank you for your request!</h1>
+        <p>Your commission request has been sent. I'm excited to hear about your idea and will reply by email within 24 hours.</p>
+        <a class="btn solid" href="/">Back to paintTalks</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
