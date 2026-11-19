@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="paintTalks: custom art commissions. Portraits, pet illustrations, character art and logos made just for you.">
+  <title>paintTalks | Custom Art Commissions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="Logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved (or system) theme before first paint to avoid a flash
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('paintTalks-theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+
+  <!-- ===== PILL NAVIGATION ===== -->
+  <header class="topbar">
+    <a class="logo" href="#home" aria-label="paintTalks home"><span class="face"><img class="mascot" src="logo.jpg" alt="paintTalks logo"></span>paintTalks</a>
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">How to Order</a></li>
+        <li><a href="#terms">Terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">🌙</button>
+      <a class="pill-btn" href="#contact">Order now</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="banner">
+          <div>
+            <h2>Turn Your Imagination Into Art</h2>
+            <p>Welcome, dear client! I'm a small artist who makes custom commissions: a portrait of a loved one, an illustration of your pet, or a character for your story. Every piece is handmade with care and attention to detail.</p>
+            <a class="btn" href="#contact">Request a Commission</a>
+            <a class="link-under" href="#services">See prices</a>
+          </div>
+          <div class="banner-art">
+            <img src="purple character.jpg" alt="Purple Hair Character">
+          </div>
+        </div>
+
+        <div class="quick">
+          <div>
+            <h3>Popular requests</h3>
+            <ul class="pills">
+              <li><a href="#services">🔍 Pet illustration</a></li>
+              <li><a href="#services">🔍 Portrait drawing</a></li>
+              <li><a href="#services">🔍 Character art</a></li>
+              <li><a href="#services">🔍 Logo or sticker</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Commission status</h3>
+            <div class="info-card"><b>Open for commissions</b><span>4 of 5 slots available</span></div>
+            <div class="info-card"><b>Fast replies</b><span>I answer within 24 hours</span></div>
+            <div class="info-card"><b>Digital delivery</b><span>High-quality file by email</span></div>
+          </div>
+          <div class="big-tile">
+            <div class="face"><img class="mascot" src="logo.jpg" alt="paintTalks logo"></div>
+            <p>Let's make something cute together!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT (profile style) ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="h-title">About My Commissions</h2>
+        <p class="lead">Every artwork begins with a friendly conversation, so the final piece matches your vision.</p>
+        <div class="card profile">
+          <div>
+            <div class="avatar"><img class="mascot" src="logo.jpg" alt="paintTalks logo"></div>
+            <span class="name-pill">paintTalks</span>
+            <p>Choose what you want to see first:</p>
+            <ul class="side-links">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#terms">Terms</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Fun facts</h3>
+            <div class="facts">
+              <div class="fact"><i>🎨</i>Loves cute, colorful art</div>
+              <div class="fact"><i>🐾</i>Pets are my favorite</div>
+            </div>
+            <div class="note">
+              <p>🌟 Open for commissions</p>
+              <p>💬 Replies within 24 hours</p>
+              <p>✏️ Hand-drawn with care</p>
+            </div>
+          </div>
+          <div>
+            <h3>Information</h3>
+            <p>paintTalks started as a hobby and grew into a small business taking commissions from friends, classmates and customers online.</p>
+            <p>My goal is simple: affordable, personal artwork that you will be proud to display or give as a gift.</p>
+          </div>
+          <div class="vtab" aria-hidden="true">more information</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="h-title">Services</h2>
+        <p class="lead">Choose the type of artwork that fits you best. Prices are in US dollars / Philippine pesos.</p>
+        <div class="card-grid">
+          <article class="card service"><div class="icon" aria-hidden="true">🧑‍🎨</div><h3>Portrait Drawings</h3><p>Realistic or stylized portraits of one person or a whole family, drawn from your favorite photo.</p><p class="price">Starting at $8 / ₱500</p></article>
+          <article class="card service"><div class="icon" aria-hidden="true">🐶</div><h3>Pet Illustrations</h3><p>A colorful, lovable illustration of your dog, cat or any pet. A perfect gift for animal lovers.</p><p class="price">Starting at $6 / ₱400</p></article>
+          <article class="card service"><div class="icon" aria-hidden="true">🎮</div><h3>Digital Character Art</h3><p>Original characters, avatars and profile pictures for games, stories and social media.</p><p class="price">Starting at $9 / ₱600</p></article>
+          <article class="card service"><div class="icon" aria-hidden="true">🏷️</div><h3>Custom Logos &amp; Stickers</h3><p>Simple, memorable artwork for small businesses, school projects and organizations.</p><p class="price">Starting at $5 / ₱350</p></article>
+        </div>
+        <div class="card addons"><strong>Add-ons:</strong><span>➕ Extra character: +50%</span><span>🌄 Background: ask for a quote</span></div>
+      </div>
+    </section>
+
+    <!-- ===== HOW TO ORDER ===== -->
+    <section id="process" class="section">
+      <div class="container">
+        <h2 class="h-title">How to Order</h2>
+        <p class="lead">Four easy steps from idea to finished art.</p>
+        <ol class="steps">
+          <li class="card"><span class="num">01</span><h3>Send a message</h3><p>Tell me what you want and attach your reference photos.</p></li>
+          <li class="card"><span class="num">02</span><h3>Confirm the quote</h3><p>I reply with the price and timeline. Pay to start your sketch.</p></li>
+          <li class="card"><span class="num">03</span><h3>Review the sketch</h3><p>Check the sketch and ask for changes before coloring.</p></li>
+          <li class="card"><span class="num">04</span><h3>Get your art</h3><p>Receive your final high-quality file, ready to enjoy or share.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== TERMS ===== -->
+    <section id="terms" class="section">
+      <div class="container">
+        <h2 class="h-title">Terms of Service</h2>
+        <p class="lead">Please read before ordering so we both have a smooth, happy experience.</p>
+        <div class="terms-grid">
+          <div class="card yes"><h3>I will draw</h3><ul><li>Portraits of people</li><li>Pets and animals</li><li>Original characters (OCs)</li><li>Logos and stickers</li></ul></div>
+          <div class="card no"><h3>I won't draw</h3><ul><li>NSFW content</li><li>Heavy gore</li><li>Hateful or problematic media</li><li>Plagiarized or traced art</li></ul></div>
+        </div>
+        <div class="note pin">
+          <h3>📌 Good to know</h3>
+          <ul><li>Payment is made upfront.</li><li>Artwork is for personal use only.</li><li>Clear reference photos are required.</li><li>I may refuse a request.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT (chat style) ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="h-title">Contact</h2>
+        <p class="lead">Ready to start your commission? Send a message and I will reply within 24 hours.</p>
+        <div class="contact-grid">
+          <div class="card">
+            <h3 style="margin-bottom:1rem">Chats</h3>
+            <a class="chat" href="mailto:paintTalks@gg.example"><span class="ph">📧</span><div><b>Email</b><span>paintTalks@gg.example</span></div></a>
+            <a class="chat" href="#contact"><span class="ph">📘</span><div><b>Facebook</b><span>/paintTalks</span></div></a>
+            <a class="chat" href="#contact"><span class="ph">📸</span><div><b>Instagram</b><span>@paintTalks</span></div></a>
+          </div>
+          <form class="card" name="commission" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="commission">
+            <h3>Request a commission</h3>
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+            <label for="type">Commission type</label>
+            <select id="type" name="type"><option>Portrait Drawing</option><option>Pet Illustration</option><option>Digital Character Art</option><option>Logo or Sticker</option></select>
+            <label for="details">Tell me your idea</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+            <p class="hint">I'll reply by email within 24 hours.</p>
+            <button class="btn solid" type="submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Student Name: Precious Marleth P. Rosalejos</p>
+      <p>Course/Section: BSEMC-DAT &ndash; T301</p>
+      <p>&copy; 2026 paintTalks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#home" aria-label="Back to top">↑</a>
+
+  <script>
+    // Highlight the nav link of the section you are viewing
+    const links = document.querySelectorAll('.nav-list a');
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('main section').forEach(s => io.observe(s));
+
+    // Light / dark mode toggle
+    const root = document.documentElement;
+    const toggle = document.getElementById('theme-toggle');
+    function syncToggle() {
+      const dark = root.getAttribute('data-theme') === 'dark';
+      toggle.textContent = dark ? '☀️' : '🌙';
+      toggle.setAttribute('aria-pressed', String(dark));
+      toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    toggle.addEventListener('click', () => {
+      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('paintTalks-theme', next); } catch (e) {}
+      syncToggle();
+    });
+    syncToggle();
+  </script>
+</body>
+</html>
